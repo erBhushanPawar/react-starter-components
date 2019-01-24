@@ -1,12 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { H1, H2 } from './components/shared/basic-html.sc'
+import { RTable } from './components/basic-table.c'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const d = {
+    header: ["first", "second"],
+    data: ["d1", "d2"]
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <div>
+
+        <H1 content="Hello Man" />
+        <H2 content="Nice" />
+        <RTable header={d.header} />
+    </div>
+    , document.getElementById("root"))
